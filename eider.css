@@ -1,0 +1,1012 @@
+@charset "UTF-8";
+
+* {
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "나눔고딕", '돋움', '돋움체';
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        div {
+            display: block;
+        }
+
+        .wrap {
+            min-width: 1260px;
+            max-width: 1600px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .head {
+            width: 100%;
+            z-index: 10;
+            position: relative;
+            min-width: 1260px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            border-bottom: 1px solid #ccc;
+            padding-top: 50px;
+            position: relative;
+            min-width: 1260px;
+            max-width: 1600px;
+            margin: 0 auto;
+            height: 100px;
+        }
+
+        .nav .mega {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: #000 url("eider/eider_top.png") no-repeat;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav .logo {
+            position: absolute;
+            left: 140px;
+            bottom: 3px;
+        }
+
+        .nav .logo a {
+            display: block;
+            width: 153px;
+            height: 20px;
+            overflow: hidden;
+            background: url("eider/eider_top.png") 100% 0;
+        }
+
+        .nav .member {
+            position: absolute;
+            top: 16px;
+            right: 140px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            
+        }
+
+        .nav .member > li {
+            margin: 7px 0;
+            position: relative;           
+        }
+
+        .nav .member  li:hover {
+            text-decoration: underline;
+        }
+
+        .nav .member > li > a {
+            display: block;
+            font-size: 12px;
+            padding: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav .member > li:nth-child(2):before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 1px;
+            height: 15px;
+            background: black;
+        }
+
+        .nav .member > li:nth-child(3):before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 1px;
+            height: 15px;
+            background: black;
+        }
+
+        .nav .member li .my-page:after {
+            content: "\25bc";
+            position: absolute;
+            display: block;
+            right: -2px;
+            top: 3px;
+            font-size: 1px;
+        }
+        
+        .nav .member .mp-sub {
+            position: absolute;
+            top: 32px;
+            left: -12px;
+            list-style: none;
+            padding: 18px;
+            min-width: 69px;
+            border: 1px solid black;
+            display: none;
+            background: #fff;
+            z-index: 5;
+        }
+
+        .nav .member .page-on:hover .mp-sub {
+            display: block;
+        }
+
+        .nav .member .page-on:hover .my-page:after {
+            transform: rotate(180deg);
+        }
+
+        .nav .member .mp-sub li {
+            text-align: left;
+        }
+
+        .nav .member .mp-sub li a {
+            display: block;
+            font-size: 12px;
+            text-decoration: none;
+            color: #000;
+            margin: 3px 0;
+        }
+
+        .nav .member .cart a {
+            background: url("eider/eider_top.png") no-repeat -120px -100px;
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            margin: 0 8px;
+            transform: translateY(-8px);              
+        }
+
+        .nav .center {
+            text-align: center;
+            display: flex;
+            list-style: none;
+            margin-top: -20px;
+            margin-left: 450px;
+        }
+
+        .nav .center .touring  {
+            background: url("eider/touring.png")no-repeat 0 100%;
+            width: 76px;
+            height: 24px;
+            display: block;
+
+        }
+
+        .nav .center > li {
+            position: relative;
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        .nav .center > li > a {
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            color: #000;
+            padding: 19px 15px;
+            position: relative;
+            height: 60px;
+            line-height: 24px;
+            font-weight: 700;
+            z-index: -989;
+        }
+
+        .nav .center .center-sub {
+            position: absolute;
+            top: 68px;
+            left: 50%;
+            margin-left: -75px;
+            min-width: 150px;
+            list-style: none;
+            background: #fff;
+            text-align: left;
+            overflow: hidden;
+            display: none;
+            z-index: 99;          
+        }
+
+        .nav .center .center-sub li a {
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+        }
+
+        .nav .right-nav {
+            list-style: none;
+            position: absolute;
+            right: 140px;
+            bottom: 15px;
+            display: flex;
+        }
+
+        .nav .right-nav li {
+            padding: 0 10px;
+            position: relative;
+        }
+
+        .nav .right-nav li:nth-child(2):before {
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: -3px;
+        }
+
+        .nav .right-nav li a {
+            text-decoration: none;
+            font-size: 14px;
+            color: black;
+            font-weight: 600;
+        }
+
+        .nav .search-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: #333 url("eider/eider_top.png") no-repeat 0 100%;
+            outline: none;
+            border: none;
+        }
+
+        .head #mega-menu {
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            max-width: 1600px;
+            min-width: 1260px;
+            padding: 23px 42px 40px;
+            background: #000;
+            display: flex;
+            flex-wrap: wrap;
+            height: 850px;
+            display: none;          
+        }
+
+        .head #mega-menu h2 {
+            color: rgb(219, 23, 23);
+            font-size: 25px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .head #mega-menu h2:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            margin-left: 20px;
+            width: 1px;
+            height: 20px;
+            transform: rotate(45deg);
+            background: rgb(219, 23, 23);
+        }
+
+        .head #mega-menu .close-btn {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            font-size: 20px;
+            background: none;
+            outline: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            padding: 16px 16px;
+            color: rgb(219, 23, 23);
+            cursor: pointer;
+        }
+
+        .head #mega-menu .top-elemnt {
+            flex: 100%;
+            height: 220px;
+            display: flex;            
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px dotted #666;
+        }
+
+        .head #mega-menu .top-elemnt > li {
+            padding-right: 110px;
+        }
+
+        .head #mega-menu .top-elemnt > li > a {
+            text-decoration: none;
+            display: block;
+            color: #999;
+            font-weight: bold;
+            padding: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .head #mega-menu .top-elemnt .sub-touring {
+            background: url("eider/touring.png")no-repeat 0 100%;
+            width: 76px;
+            height: 24px;
+            display: block;
+
+        }
+
+        .head #mega-menu .top-elemnt .sub-elemnt {
+            left: 0;
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .head #mega-menu .top-elemnt .sub-elemnt li {
+            padding: 3px 0;
+        }
+
+        .head #mega-menu .top-elemnt .sub-elemnt li a {
+            text-decoration: none;
+            color: #919191;
+            font-size: 14px;
+            display: block;
+        }
+
+        .head #mega-menu .middle-cont {
+            flex: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            justify-content: flex-start;
+            border-bottom: 1px dotted #666;
+            height: 150px;            
+        }
+
+        .head #mega-menu .middle-cont >  li {
+            position: relative;
+        }
+
+        .head #mega-menu .middle-cont > li > a {
+            color: #999;
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+        }
+
+        .head #mega-menu .middle-cont > li > a:hover {
+            color: #f1f1f1;
+            text-decoration: underline;
+        }
+
+        .head #mega-menu .middle-cont .middle-sub {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px 0 0;
+            width: 250px;
+        }
+
+        .head #mega-menu .middle-cont .middle-sub li {
+            padding: 0 25px;
+        }
+
+        .head #mega-menu .middle-cont .middle-sub li:first-child {
+            padding: 0;
+        }
+
+        .head #mega-menu .middle-cont .middle-sub li a {
+            color: #919191;
+            font-size: 14px;
+        }
+        
+        #mega-menu .cs-center {
+            flex: 40%;
+        }
+
+        #mega-menu .my-info {
+            flex: 55%;
+        }
+
+        #mega-menu .cs-center ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #mega-menu .cs-center ul li {
+            flex: 33%;
+            padding-top: 10px;
+        }
+
+        #mega-menu .cs-center ul li a {
+            display: block;
+            color: #999;
+            font-size: 14px;
+        }
+
+        #mega-menu .my-info > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #mega-menu .my-info > ul > li {
+            flex: 25%;
+        }
+
+        #mega-menu .my-info > ul > li > a {
+            color: #aaa;
+            font-size: 14px;
+            padding: 10px 0 8px 0;
+            display: block;
+        }
+
+        #mega-menu .my-info .info-sub {
+            padding-top: 8px;
+        }
+
+        #mega-menu .my-info .info-sub a {
+            color: #999;
+            font-size: 14px;
+            margin-left: 10px;
+            margin: 8px 3px;
+        }
+
+        #mega-menu .my-info .info-sub a:before {
+            content: "-";
+
+        }
+
+        .head #mega-menu .cs-center a:hover,
+        .head #mega-menu .my-info a:hover {
+            color: #f1f1f1;
+            text-decoration: underline;
+        }
+
+        .head #search {
+            position: absolute;
+            height: 0;
+            top: 0;
+            left: 0;
+            min-width: 1260px;
+            max-width: 1600px;
+            overflow: hidden;
+            z-index: 2;
+            width: 100%;
+            background: #3b3b3b;
+            transition: 0.4s;
+        }
+
+        .head #search .inner-search {
+            width: 700px;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .head #search .inner-search .input-search {
+            border-bottom: 2px solid #fff;
+        }
+
+        .head #search .inner-search .input-search input {
+            color: #fff;
+            font-size: 16px;
+            padding: 0 58px 0 15px;
+            height: 60px;
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .head #search .inner-search .input-search ::placeholder {
+            color: #d4d4d4;
+            font-size: 15px;
+        }
+
+        .head #search .inner-search .inner-sc-btn {
+            position: absolute;
+            height: 60px;
+            top: 0;
+            right: 0;
+            width: 30px;
+            font-size: 20px;
+            color: #fff;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .head #search .search-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 20px;
+            color: #ddd;
+            cursor: pointer;
+        }
+
+        .main-slider {
+            position: relative;
+            margin: 0;
+            width: 1600px;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .mavin-slider .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+        }
+
+        .main-slider .slider-wrap {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0;
+            margin-bottom: 80px;
+        }
+
+        .main-slider .slider-wrap #main-slide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            box-sizing: content-box;
+        }
+
+        .main-slider .slider-wrap #main-slide .slide-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .main-slider .slider-wrap #main-slide .slide-content img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-slider .control {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 25px;
+            height: 16px;
+            text-align: center;
+            overflow: hidden;
+            z-index: 11;
+        }
+
+        .main-slider .slider-container .indicator a {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 3px;
+            margin-right: 3px;
+            overflow: hidden;
+            background: #f1f1f1;
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        .main-slider .slider-container .indicator a.active {
+            background: coral;
+        }
+
+        .main-slider .slider-container .control .control-btn {
+            background: url("eider/rotating_btn_01.png") no-repeat;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            display: block;
+        }
+
+        .wrap .row-content {
+            width: 1488px;
+            position: relative;
+            margin: 120px auto 90px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wrap .row-content a {
+            padding-left: 15px;
+        }
+
+        .wrap .product {
+            position: relative;
+            width: 1100px;
+            margin: 0 auto;
+            padding: 40px 0 80px;
+        }
+
+        .wrap .product .title{
+            position: relative;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .wrap .product .title ul {
+            height: auto;
+            display: flex;
+            overflow: hidden;
+            text-align: center;
+            min-height: 21px;
+            justify-content: center;
+        }
+
+        .wrap .product .title ul li {
+            background: none;
+            padding-right: 20px;
+        }
+
+        .wrap .product .title ul li a {
+            color: #777;
+            font-weight: bold;
+            display: block;
+            font-size: 20px;
+        }
+
+        .wrap .product .title ul li a.current {
+            background: url("eider/na.jpg") no-repeat 50% 100%;
+            padding: 0 0 13px 0;
+            color: #000;
+        }
+
+        .wrap .product .sub {
+            position: relative;
+            margin: 22px 0 0 0;
+            padding-bottom: 22px;
+            background: url("eider/product-line.png") repeat-x 0 100%;
+        }
+
+        .wrap .product .sub ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap .product .sub ul li {
+            padding-right: 20px;
+        }
+
+        .wrap .product .sub ul li a {
+            display: block;
+            color: #777;
+            font-weight: 600;
+        }
+
+        .wrap .product .sub ul li a.select  {
+            background: url("eider/sub_angle.png") no-repeat 50% 100%;
+            color: #000;
+            padding: 0 0 13px 0;
+        }
+
+        .prod-frame {
+            margin: 0;
+            padding: 0;
+            display: none;            
+        }
+
+        .prod-frame .prod-wrap {
+            overflow: hidden;
+            margin-top: -40px;
+            margin: 40px 0 0 40px;
+            display: none;
+            width: 100%;
+        }
+
+        .prod-frame .prod-wrap .prod-list {
+            min-height: 360px;
+            text-align: center;
+            float: left;
+        }
+        
+        .prod-frame .prod-wrap .prod-list .prod-img {
+            display: block;
+            width: 243px;
+            height: 243px;
+            line-height: 243px;
+            overflow: hidden;
+        }
+
+        .prod-frame .prod-wrap .prod-list .prod-type {
+            margin-bottom: 11px;
+            height: 19px;
+            overflow: hidden;
+        }
+
+        .prod-frame .prod-wrap .prod-list .prod-type span {
+            border: 1px solid #666;
+            height: 17px;
+            line-height: 17px;
+            font-size: 12px;
+            color: #111;
+            min-width: 38px;
+            display: inline-block;
+        }
+
+        .prod-frame .prod-wrap .prod-list .prod-name{
+            width: 250px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: center;
+            line-height: 22px;
+            color: #000;
+        }
+
+        .prod-frame .prod-wrap .prod-list .prod-price {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .prod-frame .prod-wrap .prod-list .prod-price span {
+            font-size: 12px;
+            padding-left: 2px;
+        }
+
+        .prod-frame .prod-wrap .prod-color {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 9px;
+        }
+
+        .prod-frame .prod-wrap .prod-color a {
+            display: block;
+            width: 11px;
+            height: 9px;
+            line-height: 9px;
+            border-radius: 50%;
+            margin-right: 2px
+        }
+
+        .wrap .vid-cont {
+            margin-top: 35px;
+            padding-top: 0;
+            display: block;           
+        }
+
+        .wrap .vid-cont .vid-wrap {
+            width: 1100px;
+            margin: 0 auto 50px;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .wrap .vid-cont .vid-wrap .img {
+            position: relative;
+        }
+
+        .wrap .vid-cont .vid-wrap .img img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .wrap .event-wrap {
+            display: flex;
+            margin: 0 auto 50px;
+            width: 1100px;
+        }
+
+        .wrap .footer {
+            position: relative;
+            min-width: 1200px;
+            max-width: 1540px;
+            padding: 0 30px;
+            margin: 0 auto;
+            height: 300px;
+        }
+
+        .wrap .footer .footer-wrap {
+            padding-top: 8px;
+            background: url("eider/footer-line.png") repeat-x 0 0;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav {
+            width: 100%;
+            background: url("eider/footer-line2.png") repeat-x 0 100%;
+            margin-bottom: 30px;
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav > ul {
+           display: flex;           
+        }
+
+        .wrap .footer .footer-wrap .footer-nav > ul > li {
+            padding: 17px 15px;
+            position: relative;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav > ul > li a {
+            color: #555;
+            font-size: 14px;
+            display: block;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav > ul > li:before {
+            content: "/";
+            position: absolute;
+            left: -3px;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav > ul > li:first-child:before {
+            content: none;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site {
+            position: relative;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site > a {
+            color: #555;
+            padding: 17px 0;
+            background: url("eider/angle-top.png") no-repeat 100% 50%;
+            width: 130px;
+            display: block;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site > a.open {
+            background: url("eider/sub_angle.png") no-repeat 100% 50%;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site ul {
+            position: absolute;
+            bottom: 52px;
+            border: 1px solid #ccc;
+            background: #fff;
+            max-height: 150px;
+            transition: 0.4s;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site ul.show {
+            opacity: 1;
+            min-height: 150px;        
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site ul li {
+            padding: 5px 7px;
+        }
+
+        .wrap .footer .footer-wrap .footer-nav .family-site ul li a {
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer .footer-cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .footer-cont .footer-info {
+            flex: 50%;
+        }
+
+        .footer .footer-cont .footer-info .foot-logo {
+            width: 150px;
+            height: 12px;
+            overflow: hidden;;
+            margin-bottom: 18px;
+            background: url("eider/eider_top.png") no-repeat 0 0;
+            background-size: cover;
+            display: block;
+            font-size: 0;
+            margin-left: -60px;
+        }
+
+        .footer .footer-cont .footer-info > div {
+            overflow: hidden;
+            display: flex;
+            padding: 3px 0;
+        }
+
+        .footer .footer-cont .footer-info address {
+            display: block;
+            font-size: 12px;
+            font-style: normal;
+            margin-right: 15px;
+            color: #666;
+            line-height: 20px;
+        }
+
+        .footer .footer-cont .footer-info > div > span {
+            display: block;
+            margin-right: 15px;
+            line-height: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .footer .footer-cont .footer-info > div span {
+            display: block;
+            margin-right: 15px;
+            line-height: 20px;
+            color: #666;
+        }
+
+        .footer .footer-cont .footer-info > div a {
+            display: block;
+            color: #d2232a;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        .footer .footer-cont .footer-info p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            padding: 8px 0;
+        }
+
+        .footer .footer-cont .footer-custom {
+            flex: 20%;
+        }
+
+        .footer .footer-cont .footer-custom h2 {
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .footer-cont .footer-custom h3 {
+            font-size: 28px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            color: #333;
+        }
+
+        .footer .footer-cont .footer-custom span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer .footer-cont .footer-custom p {
+            font-size: 12px;
+            color: #666;
+            padding: 0;
+        }
